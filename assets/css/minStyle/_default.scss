@@ -1,0 +1,138 @@
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-of-white;
+  @extend%trans2;
+  position: relative;
+  z-index: 1;
+  &.gradient-color {
+    padding: 60px 0 !important;
+    background-color: unset;
+    height: 100%;
+    z-index: 1;
+    &.register-page {
+      &:after {
+        background: linear-gradient(
+          0deg,
+          rgba($color-primary-light, 0.5) 0%,
+          rgba($color-primary, 0.5) 100%
+        );
+      }
+    }
+    &:after {
+      inset: 0;
+      position: fixed;
+      content: "";
+      background: linear-gradient(
+        180deg,
+        rgba($color-primary-light, 0.5) 0%,
+        rgba($color-primary, 0.5) 100%
+      );
+      z-index: -1;
+    }
+  }
+  &.pad-0 {
+    @include dir(rtl) {
+      padding: 24px {
+        right: 24px + 90px;
+      }
+    }
+    @include dir(ltr) {
+      padding: 24px {
+        left: 24px + 90px;
+      }
+    }
+  }
+  @include dir(rtl) {
+    font-family: "Tajawal", sans-serif;
+    padding: 24px {
+      right: 260px + 24px;
+    }
+  }
+  @include dir(ltr) {
+    font-family: "Nunito", sans-serif;
+    padding: 24px {
+      left: 260px + 24px;
+    }
+  }
+}
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   background-color: $color-of-white;
+//   @extend%trans4;
+//   position: relative;
+//   z-index: 1;
+//   &.pad-0 {
+//     @include dir(rtl) {
+//       padding: 24px {
+//         right: 24px;
+//       }
+//     }
+//     @include dir(ltr) {
+//       padding: 24px {
+//         left: 24px;
+//       }
+//     }
+//   }
+//   @include dir(rtl) {
+//     font-family: "Tajawal", sans-serif;
+//     padding: 24px {
+//       right: 260px + 24px;
+//     }
+//   }
+//   @include dir(ltr) {
+//     font-family: "Nunito", sans-serif;
+//     padding: 24px {
+//       left: 260px + 24px;
+//     }
+//   }
+// }
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($color-gray, 1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color-primary, 0.2);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color-primary, 0.5);
+}
+
+@media (max-width: 992px) {
+  body {
+    padding: 24px !important;
+  }
+}

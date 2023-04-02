@@ -1,0 +1,61 @@
+.box-backColor {
+  background-color: rgba($color-gray, 1);
+  @extend%trans2;
+  &:hover {
+    background-color: rgba($color-primary-light, 0.1);
+  }
+}
+.prag-box {
+  padding: 18px;
+  box-shadow: -3px 0px 8px rgba(102, 102, 102, 0.02),
+    3px 3px 8px rgba(102, 102, 102, 0.02);
+  border-radius: 5px;
+}
+
+.lsit-box {
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 0;
+    li {
+      @include dir(rtl) {
+        padding-left: 12px;
+      }
+      @include dir(ltr) {
+        padding-right: 12px;
+      }
+      i {
+        color: rgba($color-primary, 1);
+      }
+      .text {
+        color: rgba($color-primary-light, 1);
+        font-size: 16px;
+        font-weight: 500;
+        @include dir(rtl) {
+          padding-right: 6px;
+        }
+        @include dir(ltr) {
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+}
+.input-shape {
+  .label-item {
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-primary-light;
+    margin: 0 0 6px;
+  }
+  .input-item {
+    border: 1px solid $color-primary-light;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 4px;
+  }
+}

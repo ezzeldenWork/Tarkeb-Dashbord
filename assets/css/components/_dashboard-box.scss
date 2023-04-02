@@ -1,0 +1,135 @@
+.dashboard-box {
+  padding: 12px;
+  border-radius: 9px;
+  background-color: $color-white;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 24px) !important;
+  &.shadowBox {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.08);
+  }
+  &.login-box {
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(19, 19, 19, 0.2);
+    .button-box {
+      button {
+        margin: 0 auto;
+        padding: 11px 46px;
+      }
+    }
+  }
+  .icon-box {
+    height: 69px;
+    width: 69px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: $color-white;
+    background-color: var(--background);
+    margin: 14px auto 0;
+    border: 5px solid $color-white;
+    filter: drop-shadow(2px 4px 10px rgba(0, 0, 0, 0.15));
+  }
+  .box-icon-title {
+    text-align: center;
+    padding: 18px 0;
+    font-weight: 600;
+    font-size: 24px;
+    color: $color-black;
+  }
+  .icon-box-number {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    color: $color-white;
+    -webkit-text-stroke: 1px var(--background);
+  }
+  .dashboard-box-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
+
+  .dashboard-box-content {
+    height: 100%;
+    canvas {
+      height: 100% !important;
+      object-fit: contain;
+    }
+  }
+  .dashboard-box-list {
+    max-height: 220px;
+    overflow-y: auto;
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 4px;
+        margin: 0 2px 6px;
+        border-radius: 4px;
+        .list-box {
+          display: flex;
+          align-items: center;
+          .cercle-box {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 600;
+            color: $color-white;
+            display: flex;
+            align-items: center;
+            background-color: rgba($color-primary, 1);
+            justify-content: center;
+          }
+          .list-content {
+            padding: 0 12px;
+            .name {
+              font-size: 14px;
+              font-weight: 600;
+              color: $color-black;
+            }
+            .more {
+              font-size: 11px;
+              font-weight: 400;
+              color: $color-black;
+              padding: 10px 0 0;
+            }
+          }
+        }
+        .date-box {
+          @include dir(rtl) {
+            margin-right: auto;
+          }
+          @include dir(ltr) {
+            margin-left: auto;
+          }
+          .date-item {
+            font-size: 12px;
+            font-weight: 400;
+            color: $color-black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-box {
+  .photo-box {
+    padding: 0 0 12px;
+    text-align: center;
+    img {
+      height: 80px;
+      margin: 0 auto;
+    }
+  }
+}

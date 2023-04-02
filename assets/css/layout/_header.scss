@@ -1,0 +1,193 @@
+.nav-section {
+  padding: 0 0 12px;
+  .menu-icon {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    &:hover {
+      .line {
+        background-color: rgba($color-primary-light, 1);
+      }
+    }
+    &.checked {
+      .line {
+        &:nth-child(odd) {
+          transform: scaleX(1);
+        }
+      }
+    }
+    .line {
+      display: inline-block;
+      margin: 3px 0;
+      width: 30px;
+      height: 3px;
+      border-radius: 15px;
+      background-color: rgba($color-primary, 1);
+      @extend%trans2;
+      transform-box: fill-box;
+      @include dir(rtl) {
+        transform-origin: right;
+      }
+      @include dir(ltr) {
+        transform-origin: left;
+      }
+      &:nth-child(odd) {
+        transform: scaleX(0.6);
+      }
+    }
+  }
+  .profile-box {
+    position: relative;
+    .user-box {
+      width: fit-content;
+      cursor: pointer;
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      @include dir(rtl) {
+        margin-right: auto;
+      }
+      @include dir(ltr) {
+        margin-left: auto;
+      }
+      .img-box {
+        padding: 0 4px;
+      }
+      .name-box {
+        .name {
+          font-size: 16px;
+          font-weight: 600;
+          color: rgba($color-black, 1);
+          padding: 0 0 4px;
+        }
+        .role {
+          font-size: 12px;
+          font-weight: 500;
+          color: rgba($color-primary-light, 0.6);
+        }
+      }
+      .user-list-box {
+        // display: none;
+        right: -100px;
+        position: absolute;
+        z-index: 9999999;
+        top: 50px;
+        ul {
+          border-radius: 10px;
+          background-color: rgba($color-white, 1);
+          min-width: 220px;
+          box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.2),
+            3px 3px 4px rgba(0, 0, 0, 0.2);
+          &:after {
+            bottom: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-bottom-color: rgba($color-white, 1);
+            border-width: 14px;
+            margin-left: -33px;
+          }
+          li {
+            a {
+              font-size: 18px;
+              display: flex;
+              align-items: center;
+              padding: 14px 16px;
+              i {
+                color: rgba($color-primary, 1);
+              }
+              .text {
+                display: block;
+                font-weight: 500;
+                padding: 0 12px;
+                font-size: 16px;
+                color: rgba($color-gray, 1);
+                @extend%trans2;
+              }
+              &:hover {
+                .text {
+                  color: rgba($color-black, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .user-menu-box {
+      position: absolute;
+      z-index: 333;
+      top: 80px;
+      box-shadow: -2px 0px 4px rgba(0, 0, 0, 0.08),
+        2px 2px 4px rgba(0, 0, 0, 0.08);
+      left: 0;
+      border-radius: 6px;
+      display: none;
+      background-color: rgba($color-white, 1);
+      &:after {
+        right: 48px;
+        border: solid transparent;
+        content: " ";
+
+        top: -30px;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: rgba($color-white, 1);
+        border-width: 15px;
+      }
+      ul {
+        overflow: hidden;
+        li {
+          border-bottom: 1px solid rgba($color-primary-light, 1);
+          &:last-of-type {
+            border-bottom: 0;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            padding: 14px;
+            min-width: 176px;
+            font-size: 14px;
+            @extend%trans2;
+            &:hover {
+              background-color: rgba($color-primary-light, 0.1);
+            }
+            i {
+              color: rgba($color-primary, 1);
+            }
+            .text {
+              padding: 0 6px;
+              color: rgba($color-primary-light, 1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 772px) {
+  .nav-section {
+    .user-box {
+      .name-box {
+        display: none;
+      }
+    }
+    .profile-box {
+      .user-menu-box {
+        &:after {
+          right: unset;
+          left: 19px;
+        }
+      }
+    }
+  }
+}

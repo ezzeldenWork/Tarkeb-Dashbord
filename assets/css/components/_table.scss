@@ -1,0 +1,83 @@
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 6px;
+  margin: 0 3px;
+}
+.dataTables_wrapper .dataTables_paginate span .paginate_button {
+  padding: 6px 12px;
+  border-radius: 6px !important;
+  background: rgba($color-primary-light, 0.1) !important;
+  color: $color-primary !important;
+  @extend%trans2;
+}
+.dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
+  background: rgba($color-primary-light, 0.15) !important;
+  color: $color-primary !important;
+}
+
+table.dataTable.nowrap th,
+table.dataTable.nowrap td {
+  text-align: start;
+}
+
+table {
+  .img-box {
+    text-align: center;
+    img {
+      height: 50px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 28px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 50px;
+  .text {
+    display: block;
+    padding: 0 2px;
+  }
+  &.true-state {
+    background: #effef1;
+    border-color: #31a616;
+    color: #30a616ad;
+  }
+  &.false-state {
+    background: #fad5d2;
+    border-color: #da0f0f;
+    color: #da0f0faf;
+  }
+}
+
+.edit-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    margin: 0 2px;
+    font-size: 14px;
+    .fa-pen {
+      color: blue;
+      &:hover {
+        color: #222;
+      }
+    }
+    .fa-eye {
+      color: green;
+      &:hover {
+        color: #222;
+      }
+    }
+    .fa-trash-alt {
+      color: red;
+      &:hover {
+        color: #222;
+      }
+    }
+  }
+}

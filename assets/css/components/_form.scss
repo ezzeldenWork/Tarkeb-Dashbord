@@ -1,0 +1,109 @@
+.form-group {
+  padding: 0 0 12px 0;
+  label {
+    display: block;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-primary-light;
+    margin: 0 0 6px;
+  }
+  input,
+  textarea {
+    border: 1px solid $color-primary-light;
+    outline: transparent;
+    &:focus {
+      box-shadow: unset;
+      outline: transparent;
+      border: 1px solid $color-primary;
+    }
+    @include dir(rtl) {
+      direction: rtl;
+    }
+    @include dir(ltr) {
+      direction: ltr;
+    }
+  }
+  .text-muted {
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-primary-light;
+  }
+  .select-box {
+    .select2-container {
+      width: 100% !important;
+      .select2-selection--single {
+        height: 38px;
+        .select2-selection__arrow {
+          top: 6px !important;
+        }
+        .select2-selection__rendered {
+          padding-top: 4px;
+        }
+      }
+    }
+  }
+}
+.pretty {
+  margin: 0;
+  .state label:after,
+  .state label:before {
+    z-index: 999999;
+    top: 50%;
+    @include dir(rtl) {
+      left: unset;
+      right: 1px;
+    }
+  }
+  .state label:before {
+    border-color: $color-gray;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .state label::after {
+    transform: scale(0.6) translateY(-87%) !important;
+  }
+  & input:checked ~ .state label::before {
+    border-color: $color-primary;
+  }
+  & input:checked ~ .state label::after {
+    background-color: $color-primary !important;
+  }
+  &.p-default input:checked ~ .state label:after {
+    background-color: $color-primary !important;
+  }
+  &.p-switch {
+    @include dir(rtl) {
+      input:checked ~ .state label:after {
+        right: 1rem;
+      }
+    }
+    .state {
+      label {
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+.select2-container--default {
+  z-index: 9999;
+  .select2-results__option--highlighted {
+    &.select2-results__option--selectable {
+      background-color: $color-primary;
+    }
+  }
+}
+
+.dropify-wrapper {
+  border-radius: 6px;
+  border: 1px solid $color-primary-light;
+  // height: ;
+  .dropify-message {
+    p {
+      font-size: 14px;
+    }
+  }
+}

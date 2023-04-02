@@ -1,0 +1,17 @@
+.button-box {
+  a,
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    color: $color-white;
+    border-radius: 6px;
+    @extend%trans2;
+    background-color: $color-primary;
+    border: 0;
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}

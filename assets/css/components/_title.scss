@@ -1,0 +1,36 @@
+.dashboard-box-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $color-black;
+  }
+  .dashboard-more-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-primary;
+    @extend%trans2;
+    &:hover {
+      color: $color-black;
+    }
+  }
+}
+
+.prag {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-primary-light;
+}
+.primary-item {
+  color: rgba($color-primary, 1) !important;
+}
+
+@media (max-width: 772px) {
+  .dashboard-box-title {
+    .title {
+      font-size: 16px;
+    }
+  }
+}
