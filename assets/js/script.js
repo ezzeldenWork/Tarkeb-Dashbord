@@ -7,7 +7,7 @@ $(document).ready(function () {
       "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json";
   }
 
-  $(".chat-content").scrollTop($(".end-div").offset().top);
+
   //  side menu
 
   $(document).click(function (e) {
@@ -66,4 +66,22 @@ $(document).ready(function () {
     },
     scrollX: true,
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(".chat-content").scrollTop($(".end-div").offset().top);
 });
