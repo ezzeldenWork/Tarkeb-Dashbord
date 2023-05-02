@@ -1,0 +1,120 @@
+.chat-section {
+  .chat-box {
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+    .chat-header {
+      padding: 12px;
+      border-bottom: 1px solid $color-gray;
+      .img-name {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: fit-content;
+        .img-box {
+          img {
+            aspect-ratio: 1;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+        .name {
+          color: $color-primary;
+          font-weight: 500;
+          font-size: 16px;
+          padding: 0 4px;
+        }
+      }
+    }
+    .chat-content {
+      height: 500px;
+      overflow-y: auto;
+      padding: 12px;
+      background-color: rgba($color-gray, 0.5);
+      .chat-item {
+        &.resev-chat {
+          .chat-item-box {
+            align-items: flex-end;
+            .prag {
+              background: rgba(175, 230, 255, 0.5);
+              color: rgba($color-black, 1);
+            }
+          }
+          .time {
+          }
+        }
+        &.send-chat {
+          .chat-item-box {
+            .prag {
+              background: linear-gradient(
+                48.84deg,
+                #006ef1 12.66%,
+                #00b5be 81.99%
+              );
+              color: rgba($color-white, 1);
+            }
+          }
+        }
+        .chat-item-box {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 12px;
+          .prag {
+            margin-bottom: 4px;
+            max-width: 500px;
+            border-radius: 12px;
+            line-height: 2;
+            padding: 12px;
+            font-size: 12px;
+          }
+        }
+
+        .time {
+          color: rgba($color-primary, 1);
+          font-size: 13px;
+          display: block;
+          margin-bottom: 4px;
+          font-weight: 400;
+        }
+      }
+    }
+    .chat-input {
+      padding: 12px;
+      form {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        input {
+          width: 94%;
+          height: 50px;
+          border-radius: 100px;
+          border: 1px solid rgba($color-gray, 1);
+          padding: 12px;
+          @include dir(rtl) {
+            margin-left: 6px;
+          }
+          @include dir(ltr) {
+            margin-right: 6px;
+          }
+          &:focus {
+            outline: transparent;
+            box-shadow: 0;
+            border: 1px solid rgba($color-primary, 0.8);
+          }
+        }
+        button {
+          height: unset;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(48.84deg, #006ef1 12.66%, #00e6f0 81.99%);
+          border: 0;
+          width: 50px;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
