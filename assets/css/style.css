@@ -238,6 +238,8 @@ html[dir=ltr] .side-section.scal-box {
   }
 }
 .nav-section {
+  z-index: 999999999999999;
+  position: RELATIVE;
   padding: 0 0 12px;
 }
 .nav-section .menu-icon {
