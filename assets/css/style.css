@@ -881,7 +881,7 @@ html[dir=rtl] .pretty.p-switch input:checked ~ .state label:after {
 }
 
 .select2-container--default {
-  z-index: 888;
+  z-index: 99999;
 }
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: #2b4560;
@@ -893,10 +893,6 @@ html[dir=rtl] .pretty.p-switch input:checked ~ .state label:after {
 }
 .dropify-wrapper .dropify-message p {
   font-size: 14px;
-}
-
-.modal .select2-container--default {
-  z-index: 9999 !important;
 }
 
 .box-backColor {

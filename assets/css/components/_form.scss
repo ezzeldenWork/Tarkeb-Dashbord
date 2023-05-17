@@ -89,7 +89,7 @@
 }
 
 .select2-container--default {
-  z-index: 888;
+  z-index: 99999;
   .select2-results__option--highlighted {
     &.select2-results__option--selectable {
       background-color: $color-primary;
