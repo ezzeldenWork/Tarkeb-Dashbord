@@ -896,7 +896,7 @@ html[dir=rtl] .pretty.p-switch input:checked ~ .state label:after {
 }
 
 .modal .select2-container--default {
-  z-index: 9999;
+  z-index: 9999 !important;
 }
 
 .box-backColor {
