@@ -830,6 +830,10 @@ html[dir=ltr] .form-group textarea {
   font-weight: 400;
   color: #6f737f;
 }
+.form-group .select-box {
+  z-index: 88;
+  position: relative;
+}
 .form-group .select-box .select2-container {
   width: 100% !important;
 }
