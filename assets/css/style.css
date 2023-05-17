@@ -238,8 +238,8 @@ html[dir=ltr] .side-section.scal-box {
   }
 }
 .nav-section {
-  z-index: 9999999;
-  position: RELATIVE;
+  z-index: 999;
+  position: relative;
   padding: 0 0 12px;
 }
 .nav-section .menu-icon {
@@ -880,9 +880,6 @@ html[dir=rtl] .pretty.p-switch input:checked ~ .state label:after {
   display: none !important;
 }
 
-.select2-container--default {
-  z-index: 9999;
-}
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
   background-color: #2b4560;
 }
