@@ -103,7 +103,7 @@ html[dir=ltr] body {
   top: 0;
   bottom: 0;
   background-color: #f5f5f5;
-  z-index: 9999;
+  z-index: 888;
   overflow-y: auto;
 }
 html[dir=rtl] .side-section.open-aside {
